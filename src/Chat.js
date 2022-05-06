@@ -1,11 +1,10 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React ,  { useState, useEffect }  from "react";
+
 import ScrollToBottom from "react-scroll-to-bottom";
 
 
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-// import { useCallback } from "react";
 
 
 function Chat({ socket, username, room }) {
@@ -30,18 +29,15 @@ function Chat({ socket, username, room }) {
     }
   };
 
-  useEffect((list) => {
+  useEffect((_list) => {
     socket.on("receive_message", (data) => {
       setMessageList((list) => [...list, data]);
-      console.log("inside use effect");
     });
   }, [socket]);
 
   return (
     <div className="chat-window">
-      {/* <div className="chat-header">
-        <p>You arein Chat Room </p>
-      </div> */}
+ 
       <div className="chat-body">
         <ScrollToBottom className="message-container">
           {messageList.map((messageContent) => {

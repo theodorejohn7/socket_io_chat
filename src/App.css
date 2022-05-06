@@ -204,7 +204,6 @@ border-top-right-radius : 20px;
 #other .message-content {
   justify-content: flex-end;
   /* background-color: cornflowerblue; */
-  justify-content: flex-end;
   background-color: grey;
   box-shadow: -1px 1px 12px 5px grey;
   
